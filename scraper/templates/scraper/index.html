@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Trending Topics</title>
+</head>
+<body>
+   {% comment %} {% if trends %}  {% endcomment %}
+    <h1>Trending Topics</h1>
+    <ul>
+        {% for trend in trends %}
+            <li>{{ trend }}</li>
+        {% endfor %}
+    </ul>
+    <p>Datetime: {{ datetime }}</p>
+    <p>IP Address: {{ ip_address }}</p>
+    <p>JSON Extract: {{ json_extract }}</p>
+   {% comment %} {% endif %}  {% endcomment %}
+    <!-- Add this form to create the button -->
+    <form action="{% url 'run_script' %}">
+        <input type="submit" value="Run Script" />
+    </form>
+</body>
+</html>
