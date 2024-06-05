@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 def get_trending_topics():
     option = Options()
-    option.add_argument("--headless")
+    # option.add_argument("--headless")
     option.add_argument("--no-sandbox")
     option.add_argument("--disable-gpu")
 
