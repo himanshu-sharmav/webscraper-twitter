@@ -5,9 +5,16 @@ FROM python:3.9-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install dependencies
+# Install system dependencies
 RUN apt-get update \
-    && apt-get install -y build-essential libpq-dev wget gnupg2
+    && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    wget \
+    gnupg2 \
+    unzip \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install Chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
@@ -17,10 +24,9 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 
 # Install ChromeDriver
 RUN CHROME_DRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE) \
-    && wget -N https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip -P ~ \
-    && unzip ~/chromedriver_linux64.zip -d ~ \
-    && rm ~/chromedriver_linux64.zip \
-    && mv -f ~/chromedriver /usr/local/bin/chromedriver \
+    && wget -N https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip -P /tmp/ \
+    && unzip /tmp/chromedriver_linux64.zip -d /usr/local/bin/ \
+    && rm /tmp/chromedriver_linux64.zip \
     && chmod +x /usr/local/bin/chromedriver
 
 # Set the working directory
