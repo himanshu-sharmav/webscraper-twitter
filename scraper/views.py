@@ -29,8 +29,8 @@ def get_trending_topics():
 
 
     # proxy_url = "http://{proxy_user_encoded}:{proxy_pass_encoded}@{proxy_host}:{proxy_port}"
-    # proxy_url ="45.32.86.6:31280"
-    # option.add_argument('--proxy-server=%s' % proxy_url)
+    proxy_url ="45.32.86.6:31280"
+    option.add_argument('--proxy-server=%s' % proxy_url)
     # PROXY = "45.32.86.6:31280"
 
     # webdriver.DesiredCapabilities.CHROME['proxy'] = {
