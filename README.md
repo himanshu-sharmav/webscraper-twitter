@@ -1,6 +1,4 @@
-Certainly! Here's an updated `README.md` file tailored for your project as it's deployed on Render:
 
----
 
 # Web Scraper
 
@@ -26,6 +24,3 @@ Contributions are welcome! Feel free to submit pull requests or open issues for 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-Replace `your-web-scraper` with the actual URL of your deployed Render application. You can also add any additional information or instructions specific to your deployed environment.
