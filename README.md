@@ -1,5 +1,3 @@
-Here’s the corrected and well-formatted version of the code/documentation:
-
 ---
 
 # Web Scraper for Twitter Trending Topics
