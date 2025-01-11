@@ -6,11 +6,11 @@ This is a Django web application that scrapes trending topics from Twitter using
 
 ## Deployment
 
-This project is deployed on Render and can be accessed at [https://your-web-scraper.onrender.com/](https://your-web-scraper.onrender.com/).
+This project working video link https://drive.google.com/file/d/1bzEPAM5mZzxwV3ARSUYztI29D7ZXsRwi/view?usp=sharing
 
 ## Usage
 
-1. Visit the deployed application at [https://your-web-scraper.onrender.com/](https://your-web-scraper.onrender.com/).
+1. Clone the repo and run the html file.
 
 2. Click the "Run Script" button to trigger the scraping process.
 
